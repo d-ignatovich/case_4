@@ -14,3 +14,11 @@ for letter in text:
    if letter in symbol:
       count_syllables += 1
 print('Слогов:', count_syllables)
+
+
+
+
+analysisPol = TextBlob(text).polarity
+analysisSub = TextBlob(text).subjectivity
+print(analysisPol)
+print((1-analysisSub)*100)
