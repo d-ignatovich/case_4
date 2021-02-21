@@ -3,18 +3,20 @@
 #               Poylova E. (60%),
 #               Miller A. (30%)
 
+# Miller A.
 text = input()
 count_sentens = text.count('.')+text.count('!')+text.count('?')
 count_words = (text.count(' ')+1)
 print('Предложений:', count_sentens)
 print('Слов:', count_words)
 count_syllables = 0
-symbol = set('ёуеэоаыяию')
-for letter in text:
-   if letter in symbol:
-      count_syllables += 1
+letter = 0
+symbol = set('ёуеэоаыяиюaeiouyАЕЁИОУЫЭЮЯAEIOUY')
+while letter < len(text):
+    if text[letter] in symbol:
+        count_syllables += 1
+    letter = letter + 1
 print('Слогов:', count_syllables)
-
 
 # Poylova E. 
 ASL=count_words/count_sentens
