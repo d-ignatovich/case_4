@@ -1,9 +1,8 @@
-# Case-study #1
-# Developers:   Ignatovich D. (20%),
-#               Poylova E. (60%),
-#               Miller A. (30%)
+# Case-study #4
+# Developers:   Ignatovich D. (33.3%),
+#               Poylova E. (33.3%),
+#               Miller A. (33.3%)
 
-# Miller A.
 text = input('Введите текст:')
 count_sentens = text.count('.')+text.count('!')+text.count('?')
 count_words = (text.count(' ')+1)
@@ -18,7 +17,6 @@ while letter < len(text):
     letter = letter + 1
 print('Слогов:', count_syllables)
 
-# Poylova E. 
 ASL=count_words/count_sentens
 ASW=count_syllables/count_words
 print ('Средняя длина предложения в словах:',ASL)
@@ -58,10 +56,14 @@ for i in range(0,a-1,1):
         else:
             print("Текст трудно читается (для выпускников ВУЗов).")
             break
-
-
-
+            
 analysisPol = TextBlob(text).polarity
 analysisSub = TextBlob(text).subjectivity
-print(analysisPol)
-print((1-analysisSub)*100)
+if analysisPol<=-0.66:
+    print("Тональность текста: негативный")
+if -0.66<analysisPol<=0.32:
+    print("Тональность текста: нейтральный")
+if 0.32 < analysisPol < 0.32:
+    print("Тональность текста: позитивный")
+print((1-analysisSub)*100,"%")
+
