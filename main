@@ -79,5 +79,3 @@ if TextBlob(text).detect_language() == 'ru':
     if 0.32 < analysisPol < 0.32:
         print("Тональность текста: позитивный")
     print("Объективность:", (1 - analysisSub) * 100, "%")
-    print(text)
-
