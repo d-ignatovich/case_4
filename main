@@ -4,7 +4,7 @@
 #               Miller A. (30%)
 
 # Miller A.
-text = input()
+text = input('Введите текст:')
 count_sentens = text.count('.')+text.count('!')+text.count('?')
 count_words = (text.count(' ')+1)
 print('Предложений:', count_sentens)
